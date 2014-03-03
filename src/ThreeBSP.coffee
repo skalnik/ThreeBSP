@@ -55,7 +55,7 @@ class window.ThreeBSP
     geometry = @toGeometry()
     returning (mesh = new THREE.Mesh geometry, material), =>
       mesh.position.setFromMatrixPosition @matrix
-      mesh.rotation.setEulerFromRotationMatrix @matrix
+      mesh.rotation.setFromRotationMatrix @matrix
 
   toGeometry: () =>
     matrix = new THREE.Matrix4().getInverse @matrix
